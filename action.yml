@@ -1,7 +1,8 @@
 name: 'Runner environment'
 description: 'Add action runner environment information to output'
-icon: server
-color: orange
+branding:
+  icon: server
+  color: orange
 outputs:
   platform:
     description: 'System platform'
