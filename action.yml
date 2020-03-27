@@ -1,0 +1,10 @@
+name: 'Runner environment'
+description: 'Add action runner environment information to output'
+outputs:
+  platform:
+    description: 'System platform'
+  arch:
+    description: 'System architecture'
+runs:
+  using: 'node12'
+  main: 'index.js'
