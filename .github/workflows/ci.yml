@@ -1,0 +1,19 @@
+name: CI
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Get runner environment variables
+      id: runner
+      uses: msansoni/runner-environment-action@v1
+    - name: Print output
+      id: output
+      run: |
+        echo ${{ format('platform: {0}, arch: {1}', steps.runner.outputs.platform, steps.runner.outputs.arch) }}
